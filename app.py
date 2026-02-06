@@ -1415,162 +1415,162 @@ AFTERMATH_CATEGORIES = [
 # ============================================
 QUIZ_QUESTIONS = [
     {
-        "question": "O que significa TAEG?",
+        "question": "O que é a TAEG de um empréstimo?",
         "options": [
-            "Taxa Anual de Encargos Efetiva Global",
-            "Taxa de Avaliação de Empréstimos Gerais",
-            "Tarifa Aplicada a Empréstimos Globais",
-            "Taxa Administrativa de Encargos Gerais",
+            "A taxa de juro sem custos adicionais",
+            "O custo total do crédito por ano, incluindo juros, comissões e seguros",
+            "A taxa que o banco cobra só no primeiro mês",
+            "O valor da prestação mensal",
         ],
-        "correct": 0,
+        "correct": 1,
     },
     {
-        "question": "Se pedires um empréstimo de 10.000€ com TAEG de 19%, quanto pagas no total?",
+        "question": "Pedes um empréstimo de 10.000€ com TAEG de 19%. Quanto pagas de juros?",
         "options": [
+            "190€",
+            "1.000€",
+            "1.900€",
             "10.000€",
-            "10.190€",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Porque é que a TAEG é mais útil que a TAN para comparar empréstimos?",
+        "options": [
+            "Porque a TAEG é sempre mais baixa",
+            "Porque a TAEG inclui todos os custos, não só os juros",
+            "Porque a TAN já não existe",
+            "Porque a TAEG não inclui impostos",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O teu festival tem custos de 60.000€ e vendes bilhetes a 40€. Quantos bilhetes precisas de vender para não ter prejuízo?",
+        "options": [
+            "1.000",
+            "1.500",
+            "2.000",
+            "600",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Se pedires um empréstimo de 10.000€ e o festival der prejuízo, o que acontece à dívida?",
+        "options": [
+            "O banco perdoa porque tiveste prejuízo",
+            "Só pagas metade",
+            "Tens de pagar na mesma o empréstimo com juros",
+            "O Estado assume a dívida",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Qual é a diferença entre um custo fixo e um custo variável?",
+        "options": [
+            "O custo fixo muda todos os meses",
+            "O custo variável é sempre mais caro",
+            "O custo fixo não depende do número de participantes, o variável sim",
+            "Não há diferença, são a mesma coisa",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Tens 50.000€ de orçamento. Gastas 45.000€ em custos fixos. Porque é que isto é arriscado?",
+        "options": [
+            "Porque 45.000€ é um número ímpar",
+            "Porque sobram apenas 5.000€ para imprevistos e emergências",
+            "Porque devias gastar tudo de uma vez",
+            "Não é arriscado, é boa gestão",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O que significa diversificar as fontes de receita num festival?",
+        "options": [
+            "Cobrar bilhetes mais caros",
+            "Ter várias fontes de rendimento como bilhetes, comida, VIP e merchandising",
+            "Gastar menos dinheiro",
+            "Pedir vários empréstimos a bancos diferentes",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Se a inflação está a 4% e o teu dinheiro no banco rende 1%, o que acontece ao longo de um ano?",
+        "options": [
+            "Ganhas poder de compra",
+            "Ficas na mesma",
+            "Perdes poder de compra porque os preços sobem mais do que o teu juro",
+            "A inflação não afeta poupanças",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Qual é o principal perigo de usar crédito para cobrir perdas de um negócio?",
+        "options": [
+            "O crédito transforma perdas em lucro",
+            "Não há perigo nenhum",
+            "Podes entrar num ciclo de dívidas onde os juros pioram a situação",
+            "O banco recusa sempre",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Um festival vende 3.000 bilhetes a 50€ e gasta 4€ por pessoa em custos variáveis. Qual é a receita líquida dos bilhetes?",
+        "options": [
+            "150.000€",
+            "138.000€",
+            "12.000€",
+            "154.000€",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Porque é importante guardar uma parte do orçamento para imprevistos?",
+        "options": [
+            "Para poder gastar tudo no último dia",
+            "Porque eventos inesperados (mau tempo, avarias) têm custos que não planeaste",
+            "Não é importante, deve-se gastar tudo",
+            "Porque o banco exige",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Qual destes comportamentos financeiros é mais responsável?",
+        "options": [
+            "Gastar primeiro, pensar depois",
+            "Pedir empréstimos para comprar coisas que não precisas",
+            "Fazer um orçamento antes de tomar decisões de gasto",
+            "Ignorar as faturas e esperar que desapareçam",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Se o preço dos bilhetes é demasiado alto, o que acontece provavelmente?",
+        "options": [
+            "Vendes mais bilhetes porque as pessoas acham que é melhor",
+            "Vendes menos bilhetes e podes não cobrir os custos",
+            "Não faz diferença no número de vendas",
+            "O governo obriga as pessoas a comprar",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O que é a taxa de esforço de um crédito?",
+        "options": [
+            "O esforço físico para ir ao banco",
+            "A percentagem do rendimento mensal que vai para pagar prestações",
+            "O número de horas que trabalhas por mês",
+            "A taxa de juro multiplicada pelo prazo",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Pediste um empréstimo de 10.000€ (reembolso: 11.900€) e o festival deu prejuízo de 5.000€. Quanto deves no total?",
+        "options": [
+            "5.000€",
             "11.900€",
-            "19.000€",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "Qual é o principal risco de gastar mais do que se ganha?",
-        "options": [
-            "Ficar famoso",
-            "Acumular dívidas",
-            "Ganhar juros",
-            "Aumentar o orçamento",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "O que é um orçamento?",
-        "options": [
-            "Uma lista de desejos",
-            "Um plano de receitas e despesas",
-            "Uma conta bancária",
-            "Um empréstimo do banco",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "Qual destes é um exemplo de receita?",
-        "options": [
-            "Aluguer do recinto",
-            "Pagamento de artistas",
-            "Venda de bilhetes",
-            "Custos de limpeza",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "O que acontece quando as despesas são maiores que as receitas?",
-        "options": [
-            "Tens lucro",
-            "Ficas no zero",
-            "Tens prejuízo",
-            "Recebes um prémio",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "Qual é a diferença entre necessidade e desejo?",
-        "options": [
-            "Não há diferença",
-            "Necessidade é essencial, desejo é opcional",
-            "Desejo é mais importante",
-            "Necessidade é sempre mais cara",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "O que são juros num empréstimo?",
-        "options": [
-            "O valor que o banco te dá de presente",
-            "O custo de pedir dinheiro emprestado",
-            "O valor total do empréstimo",
-            "Uma taxa de inscrição",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "Qual é a melhor estratégia para evitar dívidas?",
-        "options": [
-            "Gastar tudo de uma vez",
-            "Pedir muitos empréstimos",
-            "Planear e controlar gastos",
-            "Ignorar as contas",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "O que é inflação?",
-        "options": [
-            "Quando os preços descem",
-            "Quando o dinheiro vale mais",
-            "Quando os preços sobem ao longo do tempo",
-            "Quando os salários aumentam",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "Porque é importante poupar dinheiro?",
-        "options": [
-            "Para gastar tudo no fim do mês",
-            "Para ter uma reserva para imprevistos",
-            "Não é importante poupar",
-            "Porque o banco obriga",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "O que é um imposto?",
-        "options": [
-            "Um presente do governo",
-            "Uma contribuição obrigatória para o Estado",
-            "Uma multa por gastar dinheiro",
-            "Um tipo de empréstimo",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "Num festival, qual destes custos é fixo (não depende do número de pessoas)?",
-        "options": [
-            "Reembolsos",
-            "Alimentação dos participantes",
-            "Aluguer do recinto",
-            "Impostos sobre vendas",
-        ],
-        "correct": 2,
-    },
-    {
-        "question": "O que significa 'risco financeiro'?",
-        "options": [
-            "Ganhar muito dinheiro",
-            "A possibilidade de perder dinheiro",
-            "Pedir um empréstimo",
-            "Investir na bolsa",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "Qual é a vantagem de comparar preços antes de comprar?",
-        "options": [
-            "Demora mais tempo",
-            "Permite encontrar a melhor relação qualidade-preço",
-            "Não tem vantagem",
-            "Os vendedores ficam contentes",
-        ],
-        "correct": 1,
-    },
-    {
-        "question": "Se o teu festival tiver prejuízo e tiveres pedido um empréstimo, o que acontece?",
-        "options": [
-            "O banco perdoa a dívida",
-            "Não precisas de pagar",
-            "Continuas a ter de pagar o empréstimo com juros",
-            "O governo paga por ti",
+            "16.900€",
+            "6.900€",
         ],
         "correct": 2,
     },
@@ -1592,8 +1592,11 @@ def init_game():
     st.session_state.sustainability = 20
     st.session_state.fan_satisfaction = 50
     st.session_state.location = None
+    st.session_state.location_key = None
     st.session_state.artist = None
+    st.session_state.artist_key = None
     st.session_state.marketing = None
+    st.session_state.marketing_key = None
     st.session_state.extras = []
     st.session_state.ticket_price = 40
     st.session_state.game_started = True
@@ -1648,6 +1651,69 @@ def calculate_demand(hype_val, price):
         demand_factor = max(0.02, (1.0 / price_ratio) ** 2.5)
     demand = base_demand * demand_factor
     return demand, fair_price
+
+def go_back_to_phase(target_phase):
+    """Reset game and replay choices up to target_phase."""
+    # Save current choices
+    old_location = st.session_state.get("location_key")
+    old_artist = st.session_state.get("artist_key")
+    old_marketing = st.session_state.get("marketing_key")
+    old_extras = list(st.session_state.get("extras", []))
+    old_credit = st.session_state.get("credit_taken", False)
+
+    # Reset everything
+    init_game()
+
+    # Replay choices up to the target phase
+    if target_phase >= 2 and old_location:
+        data = LOCATIONS[old_location]
+        st.session_state.budget -= data["cost"]
+        st.session_state.capacity = data["capacity"]
+        st.session_state.hype += data["hype"]
+        st.session_state.risk += data["risk"]
+        st.session_state.location = data["name"]
+        st.session_state.location_key = old_location
+        st.session_state.cost_breakdown["venue"] = data["cost"]
+        apply_new_metrics(data)
+
+    if target_phase >= 3 and old_artist:
+        data = ARTISTS[old_artist]
+        st.session_state.budget -= data["cost"]
+        st.session_state.hype += data["hype"]
+        st.session_state.artist = data["name"]
+        st.session_state.artist_key = old_artist
+        st.session_state.cost_breakdown["artists"] = data["cost"]
+        apply_new_metrics(data)
+
+    if target_phase >= 4 and old_marketing:
+        data = MARKETING[old_marketing]
+        st.session_state.budget -= data["cost"]
+        st.session_state.hype += data["hype"]
+        st.session_state.risk += data.get("risk_bonus", 0)
+        st.session_state.marketing = data["name"]
+        st.session_state.marketing_key = old_marketing
+        st.session_state.cost_breakdown["marketing"] = data["cost"]
+        apply_new_metrics(data)
+
+    if target_phase >= 5:
+        for ext_key in old_extras:
+            edata = EXTRAS[ext_key]
+            st.session_state.budget -= edata["cost"]
+            st.session_state.hype += edata.get("hype", 0)
+            st.session_state.risk -= edata.get("risk_reduction", 0)
+            st.session_state.revenue_bonus += edata.get("revenue_bonus", 0)
+            st.session_state.cost_breakdown["extras"] += edata["cost"]
+            if ext_key == "food":
+                st.session_state.food_revenue_bonus = edata.get("revenue_bonus", 0)
+            elif ext_key == "vip":
+                st.session_state.vip_revenue_bonus = edata.get("revenue_bonus", 0)
+            st.session_state.extras.append(ext_key)
+            apply_new_metrics(edata)
+        if old_credit:
+            st.session_state.credit_taken = True
+            st.session_state.budget += 10000
+
+    st.session_state.phase = target_phase
 
 def display_stats():
     budget = st.session_state.budget
@@ -1841,6 +1907,7 @@ def show_location():
             st.session_state.hype += data["hype"]
             st.session_state.risk += data["risk"]
             st.session_state.location = data["name"]
+            st.session_state.location_key = key
             st.session_state.cost_breakdown["venue"] = data["cost"]
             apply_new_metrics(data)
             st.session_state.phase = 2
@@ -1850,6 +1917,11 @@ def show_artists():
     st.markdown('<h1 class="main-title">🎤 Contratar Artistas</h1>', unsafe_allow_html=True)
     display_phase_progress(2)
     display_stats()
+
+    if st.button("⬅️ Voltar ao Local", key="back_to_1", use_container_width=False):
+        go_back_to_phase(1)
+        st.rerun()
+
     display_story("artists")
 
     for key, data in ARTISTS.items():
@@ -1857,6 +1929,7 @@ def show_artists():
             st.session_state.budget -= data["cost"]
             st.session_state.hype += data["hype"]
             st.session_state.artist = data["name"]
+            st.session_state.artist_key = key
             st.session_state.cost_breakdown["artists"] = data["cost"]
             apply_new_metrics(data)
             st.session_state.phase = 3
@@ -1866,6 +1939,11 @@ def show_marketing():
     st.markdown('<h1 class="main-title">📢 Marketing</h1>', unsafe_allow_html=True)
     display_phase_progress(3)
     display_stats()
+
+    if st.button("⬅️ Voltar aos Artistas", key="back_to_2", use_container_width=False):
+        go_back_to_phase(2)
+        st.rerun()
+
     display_story("marketing")
 
     for key, data in MARKETING.items():
@@ -1874,6 +1952,7 @@ def show_marketing():
             st.session_state.hype += data["hype"]
             st.session_state.risk += data.get("risk_bonus", 0)
             st.session_state.marketing = data["name"]
+            st.session_state.marketing_key = key
             st.session_state.cost_breakdown["marketing"] = data["cost"]
             apply_new_metrics(data)
             st.session_state.phase = 4
@@ -1883,12 +1962,21 @@ def show_extras():
     st.markdown('<h1 class="main-title">✨ Extras</h1>', unsafe_allow_html=True)
     display_phase_progress(4)
     display_stats()
+
+    if st.button("⬅️ Voltar ao Marketing", key="back_to_3", use_container_width=False):
+        go_back_to_phase(3)
+        st.rerun()
+
     display_story("extras")
 
     for key, data in EXTRAS.items():
         cost = data["cost"]
         can_afford = st.session_state.budget >= cost
         selected = key in st.session_state.extras
+
+        # Security is mutually exclusive
+        other_security = "security_pro" if key == "security_basic" else "security_basic"
+        security_blocked = key in ("security_basic", "security_pro") and other_security in st.session_state.extras
 
         stats = [f'<span class="choice-stat cost">{cost:,}€</span>']
         if "hype" in data:
@@ -1921,6 +2009,9 @@ def show_extras():
 
         if selected:
             st.button(f"✅ Adicionado!", key=f"ext_{key}", disabled=True, use_container_width=True)
+        elif security_blocked:
+            other_name = EXTRAS[other_security]["name"]
+            st.button(f"Indisponível (já tens {other_name})", key=f"ext_{key}", disabled=True, use_container_width=True)
         elif can_afford:
             if st.button(f"Adicionar {data['name']}", key=f"ext_{key}", use_container_width=True):
                 st.session_state.budget -= data["cost"]
@@ -1976,6 +2067,11 @@ def show_pricing():
     st.markdown('<h1 class="main-title">🎟️ Definir Preço</h1>', unsafe_allow_html=True)
     display_phase_progress(5)
     display_stats()
+
+    if st.button("⬅️ Voltar aos Extras", key="back_to_4", use_container_width=False):
+        go_back_to_phase(4)
+        st.rerun()
+
     display_story("pricing")
 
     st.markdown(f"""
