@@ -1411,6 +1411,172 @@ AFTERMATH_CATEGORIES = [
 ]
 
 # ============================================
+# QUIZ QUESTIONS
+# ============================================
+QUIZ_QUESTIONS = [
+    {
+        "question": "O que significa TAEG?",
+        "options": [
+            "Taxa Anual de Encargos Efetiva Global",
+            "Taxa de Avaliação de Empréstimos Gerais",
+            "Tarifa Aplicada a Empréstimos Globais",
+            "Taxa Administrativa de Encargos Gerais",
+        ],
+        "correct": 0,
+    },
+    {
+        "question": "Se pedires um empréstimo de 10.000€ com TAEG de 19%, quanto pagas no total?",
+        "options": [
+            "10.000€",
+            "10.190€",
+            "11.900€",
+            "19.000€",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Qual é o principal risco de gastar mais do que se ganha?",
+        "options": [
+            "Ficar famoso",
+            "Acumular dívidas",
+            "Ganhar juros",
+            "Aumentar o orçamento",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O que é um orçamento?",
+        "options": [
+            "Uma lista de desejos",
+            "Um plano de receitas e despesas",
+            "Uma conta bancária",
+            "Um empréstimo do banco",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Qual destes é um exemplo de receita?",
+        "options": [
+            "Aluguer do recinto",
+            "Pagamento de artistas",
+            "Venda de bilhetes",
+            "Custos de limpeza",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "O que acontece quando as despesas são maiores que as receitas?",
+        "options": [
+            "Tens lucro",
+            "Ficas no zero",
+            "Tens prejuízo",
+            "Recebes um prémio",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Qual é a diferença entre necessidade e desejo?",
+        "options": [
+            "Não há diferença",
+            "Necessidade é essencial, desejo é opcional",
+            "Desejo é mais importante",
+            "Necessidade é sempre mais cara",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O que são juros num empréstimo?",
+        "options": [
+            "O valor que o banco te dá de presente",
+            "O custo de pedir dinheiro emprestado",
+            "O valor total do empréstimo",
+            "Uma taxa de inscrição",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Qual é a melhor estratégia para evitar dívidas?",
+        "options": [
+            "Gastar tudo de uma vez",
+            "Pedir muitos empréstimos",
+            "Planear e controlar gastos",
+            "Ignorar as contas",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "O que é inflação?",
+        "options": [
+            "Quando os preços descem",
+            "Quando o dinheiro vale mais",
+            "Quando os preços sobem ao longo do tempo",
+            "Quando os salários aumentam",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "Porque é importante poupar dinheiro?",
+        "options": [
+            "Para gastar tudo no fim do mês",
+            "Para ter uma reserva para imprevistos",
+            "Não é importante poupar",
+            "Porque o banco obriga",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "O que é um imposto?",
+        "options": [
+            "Um presente do governo",
+            "Uma contribuição obrigatória para o Estado",
+            "Uma multa por gastar dinheiro",
+            "Um tipo de empréstimo",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Num festival, qual destes custos é fixo (não depende do número de pessoas)?",
+        "options": [
+            "Reembolsos",
+            "Alimentação dos participantes",
+            "Aluguer do recinto",
+            "Impostos sobre vendas",
+        ],
+        "correct": 2,
+    },
+    {
+        "question": "O que significa 'risco financeiro'?",
+        "options": [
+            "Ganhar muito dinheiro",
+            "A possibilidade de perder dinheiro",
+            "Pedir um empréstimo",
+            "Investir na bolsa",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Qual é a vantagem de comparar preços antes de comprar?",
+        "options": [
+            "Demora mais tempo",
+            "Permite encontrar a melhor relação qualidade-preço",
+            "Não tem vantagem",
+            "Os vendedores ficam contentes",
+        ],
+        "correct": 1,
+    },
+    {
+        "question": "Se o teu festival tiver prejuízo e tiveres pedido um empréstimo, o que acontece?",
+        "options": [
+            "O banco perdoa a dívida",
+            "Não precisas de pagar",
+            "Continuas a ter de pagar o empréstimo com juros",
+            "O governo paga por ti",
+        ],
+        "correct": 2,
+    },
+]
+
+# ============================================
 # SESSION STATE
 # ============================================
 def init_game():
@@ -1441,6 +1607,8 @@ def init_game():
     }
     st.session_state.food_revenue_bonus = 0
     st.session_state.vip_revenue_bonus = 0
+    st.session_state.credit_taken = False
+    st.session_state.credit_total_repay = 11900
 
 if "game_started" not in st.session_state:
     init_game()
@@ -1770,6 +1938,34 @@ def show_extras():
         else:
             st.button(f"Sem orçamento", key=f"ext_{key}", disabled=True, use_container_width=True)
 
+    # ---- CREDIT OFFER ----
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+    st.markdown("""
+    <div class="story-card" style="border-left-color: #f59e0b;">
+        <span class="story-icon">🏦</span>
+        <div class="story-title">Oferta de Crédito Pessoal</div>
+        <div class="story-text">
+            O banco oferece-te um empréstimo para reforçar o orçamento do festival.<br><br>
+            <strong style="color: #f1f5f9;">Montante:</strong> 10.000€<br>
+            <strong style="color: #f1f5f9;">TAEG:</strong> 19%<br>
+            <strong style="color: #f1f5f9;">Total a reembolsar:</strong> 11.900€<br>
+            <strong style="color: #ef4444;">Custo dos juros:</strong> 1.900€<br><br>
+            <em style="color: #fbbf24;">⚠️ Atenção: Terás de pagar 11.900€ no final, independentemente do resultado do festival!</em>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    if st.session_state.credit_taken:
+        st.markdown(
+            '<div class="warning-box">✅ Empréstimo já aceite! +10.000€ adicionados ao orçamento. Terás de reembolsar 11.900€.</div>',
+            unsafe_allow_html=True,
+        )
+    else:
+        if st.button("🏦 Aceitar Empréstimo (+10.000€)", key="accept_credit", use_container_width=True):
+            st.session_state.credit_taken = True
+            st.session_state.budget += 10000
+            st.rerun()
+
     st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 
     if st.button("➡️ Continuar para Preços", type="primary", use_container_width=True):
@@ -1961,10 +2157,13 @@ def show_results():
     equipment_damage = int(damage_base * (1 + st.session_state.risk / 100))
     cleanup_cost = int(500 + (100 - st.session_state.sustainability) * 75)
 
+    credit_repayment = st.session_state.credit_total_repay if st.session_state.credit_taken else 0
+
     total_costs = (
         cb["venue"] + cb["artists"] + cb["marketing"] + cb["extras"]
         + total_cost_from_events + insurance_cost + tax
         + refund_cost + equipment_damage + cleanup_cost
+        + credit_repayment
     )
 
     initial_profit = total_revenue - total_costs
@@ -2010,6 +2209,8 @@ def show_results():
     if equipment_damage > 0:
         cost_lines.append(("Danos em Equipamento", equipment_damage))
     cost_lines.append(("Limpeza e Resíduos", cleanup_cost))
+    if credit_repayment > 0:
+        cost_lines.append(("Reembolso de Crédito (TAEG 19%)", credit_repayment))
 
     costs_html = ""
     for label, val in cost_lines:
@@ -2123,9 +2324,117 @@ def show_results():
         unsafe_allow_html=True
     )
 
-    if st.button("🔄 Jogar de Novo", use_container_width=True):
-        init_game()
-        st.rerun()
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("🔄 Jogar de Novo", use_container_width=True):
+            init_game()
+            st.rerun()
+    with col2:
+        if st.button("📝 Fazer Quiz", use_container_width=True):
+            st.session_state.phase = 7
+            st.rerun()
+
+def show_quiz():
+    st.markdown('<h1 class="main-title">📝 Quiz de Literacia Financeira</h1>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Testa os teus conhecimentos sobre finanças pessoais e gestão!</p>', unsafe_allow_html=True)
+
+    if "quiz_submitted" not in st.session_state:
+        st.session_state.quiz_submitted = False
+    if "quiz_answers" not in st.session_state:
+        st.session_state.quiz_answers = {}
+
+    if not st.session_state.quiz_submitted:
+        with st.form("quiz_form"):
+            for i, q in enumerate(QUIZ_QUESTIONS):
+                st.markdown(
+                    f'<div class="choice-card"><div class="choice-title">Pergunta {i + 1}</div>'
+                    f'<div class="choice-description">{q["question"]}</div></div>',
+                    unsafe_allow_html=True,
+                )
+                st.radio(
+                    f"Pergunta {i + 1}",
+                    options=q["options"],
+                    key=f"quiz_q_{i}",
+                    label_visibility="collapsed",
+                )
+
+            submitted = st.form_submit_button("✅ Submeter Respostas", use_container_width=True)
+            if submitted:
+                answers = {}
+                for i, q in enumerate(QUIZ_QUESTIONS):
+                    selected = st.session_state.get(f"quiz_q_{i}")
+                    if selected is not None:
+                        answers[i] = q["options"].index(selected)
+                    else:
+                        answers[i] = -1
+                st.session_state.quiz_answers = answers
+                st.session_state.quiz_submitted = True
+                st.rerun()
+    else:
+        # Show results
+        answers = st.session_state.quiz_answers
+        score = 0
+        for i, q in enumerate(QUIZ_QUESTIONS):
+            user_answer = answers.get(i, -1)
+            is_correct = user_answer == q["correct"]
+            if is_correct:
+                score += 1
+
+            icon = "✅" if is_correct else "❌"
+            card_class = "positive" if is_correct else "negative"
+            correct_text = q["options"][q["correct"]]
+
+            result_detail = ""
+            if not is_correct:
+                user_text = q["options"][user_answer] if 0 <= user_answer < len(q["options"]) else "Sem resposta"
+                result_detail = (
+                    f'<div style="color: #ef4444; font-size: 0.9rem; margin-top: 0.3rem;">A tua resposta: {user_text}</div>'
+                    f'<div style="color: #10b981; font-size: 0.9rem;">Resposta correta: {correct_text}</div>'
+                )
+
+            st.markdown(
+                f'<div class="aftermath-card {card_class}">'
+                f'<div class="aftermath-title">{icon} Pergunta {i + 1}</div>'
+                f'<div class="aftermath-text">{q["question"]}</div>'
+                f'{result_detail}'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+        # Score summary
+        pct = int(score / len(QUIZ_QUESTIONS) * 100)
+        if pct >= 80:
+            score_class = "success"
+            score_title = "🏆 Excelente!"
+        elif pct >= 50:
+            score_class = "success"
+            score_title = "👍 Bom trabalho!"
+        else:
+            score_class = "failure"
+            score_title = "📚 Continua a aprender!"
+
+        st.markdown(
+            f'<div class="result-card {score_class}">'
+            f'<div class="result-title">{score_title}</div>'
+            f'<div class="result-profit positive" style="color: #f1f5f9;">{score}/{len(QUIZ_QUESTIONS)}</div>'
+            f'<div style="color: #94a3b8; font-size: 1.1rem;">{pct}% corretas</div>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🔄 Jogar de Novo", key="quiz_replay", use_container_width=True):
+                del st.session_state.quiz_submitted
+                del st.session_state.quiz_answers
+                init_game()
+                st.rerun()
+        with col2:
+            if st.button("🔙 Voltar ao Resultado", key="quiz_back", use_container_width=True):
+                del st.session_state.quiz_submitted
+                del st.session_state.quiz_answers
+                st.session_state.phase = 6
+                st.rerun()
 
 # ============================================
 # MAIN
@@ -2147,6 +2456,8 @@ def main():
         show_pricing()
     elif phase == 6:
         show_results()
+    elif phase == 7:
+        show_quiz()
 
 if __name__ == "__main__":
     main()
